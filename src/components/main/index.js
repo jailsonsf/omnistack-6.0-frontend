@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import api from '../../services/api';
 
 import logo from '../../assets/logo.svg';
-import './styles.css';
+import { Container } from './styles';
 
 export default class Main extends Component {
     state = {
@@ -26,7 +26,7 @@ export default class Main extends Component {
 
     render() {
         return (
-            <div id="main-container">
+            <Container id="main-container">
                 <form onSubmit={this.handleSubmit}>
                     <img src={logo} alt="rocketbox" />
                     <input 
@@ -36,7 +36,7 @@ export default class Main extends Component {
                     />
                     <button type="submit">Criar</button>
                 </form>
-            </div>
+            </Container>
         );
     };
 }
